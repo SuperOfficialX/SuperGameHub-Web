@@ -77,11 +77,12 @@ a {
 }
 
 
-/* Logo */
+/* Logo + Brand */
 
 .brand {
     display: flex;
     align-items: center;
+    gap: 12px;
     min-width: 0;
 }
 
@@ -91,6 +92,26 @@ a {
     height: 48px;
     max-width: 220px;
     object-fit: contain;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 0.95;
+    white-space: nowrap;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+}
+
+.brand-super {
+    color: var(--text);
+    font-size: 17px;
+}
+
+.brand-game {
+    color: var(--accent);
+    font-size: 17px;
 }
 
 
@@ -559,11 +580,9 @@ a {
     align-items: center;
     justify-content: center;
     padding: 25px;
-
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-
     transition:
         opacity 0.25s ease,
         visibility 0.25s ease;
@@ -585,19 +604,14 @@ a {
 .modal-window {
     position: relative;
     z-index: 1;
-
     width: min(900px, 100%);
     max-height: min(88vh, 900px);
-
     overflow-y: auto;
-
     border: 1px solid var(--border);
     border-radius: 18px;
     background: var(--bg-secondary);
-
     box-shadow:
         0 30px 90px rgba(0, 0, 0, 0.55);
-
     transform: translateY(20px) scale(0.98);
     transition: transform 0.25s ease;
 }
@@ -611,25 +625,18 @@ a {
     top: 18px;
     float: right;
     z-index: 5;
-
     width: 42px;
     height: 42px;
     margin: 18px 18px 0 0;
-
     border: 1px solid var(--border);
     border-radius: 10px;
-
     background: rgba(17, 23, 34, 0.95);
     color: var(--text);
-
     font-size: 28px;
     line-height: 1;
-
     cursor: pointer;
-
     display: grid;
     place-items: center;
-
     transition:
         background 0.2s ease,
         border-color 0.2s ease,
@@ -716,13 +723,10 @@ a {
     width: 42px;
     height: 42px;
     flex: 0 0 42px;
-
     display: grid;
     place-items: center;
-
     border-radius: 11px;
     background: #182334;
-
     font-size: 20px;
 }
 
@@ -765,13 +769,10 @@ a {
     display: flex;
     flex-direction: column;
     gap: 6px;
-
     margin-top: 28px;
     padding: 20px;
-
     border: 1px solid rgba(47, 140, 255, 0.22);
     border-radius: 13px;
-
     background:
         linear-gradient(
             135deg,
@@ -800,27 +801,19 @@ a {
     left: 50%;
     bottom: 25px;
     z-index: 4000;
-
     width: min(420px, calc(100% - 28px));
     padding: 14px 16px;
-
     border: 1px solid var(--border);
     border-radius: 12px;
-
     background: rgba(17, 23, 34, 0.96);
     color: var(--text);
-
     text-align: center;
     font-size: 13px;
     font-weight: 700;
-
     box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
-
     opacity: 0;
     visibility: hidden;
-
     transform: translate(-50%, 15px);
-
     transition:
         opacity 0.2s ease,
         visibility 0.2s ease,
@@ -857,7 +850,16 @@ button:focus-visible {
 
     .brand-logo {
         height: 42px;
-        max-width: 190px;
+        max-width: 120px;
+    }
+
+    .brand {
+        gap: 9px;
+    }
+
+    .brand-super,
+    .brand-game {
+        font-size: 14px;
     }
 
     .menu-toggle {
@@ -870,19 +872,14 @@ button:focus-visible {
         left: 20px;
         right: 20px;
         top: 82px;
-
         display: none;
         flex-direction: column;
         align-items: stretch;
         gap: 0;
-
         padding: 10px;
-
         border: 1px solid var(--border);
         border-radius: 14px;
-
         background: rgba(17, 23, 34, 0.98);
-
         box-shadow:
             0 18px 45px rgba(0, 0, 0, 0.3);
     }
@@ -1020,5 +1017,19 @@ button:focus-visible {
 
     .document-intro {
         font-size: 16px;
+    }
+
+    .brand-logo {
+        height: 36px;
+        max-width: 90px;
+    }
+
+    .brand-super,
+    .brand-game {
+        font-size: 12px;
+    }
+
+    .brand {
+        gap: 7px;
     }
 }

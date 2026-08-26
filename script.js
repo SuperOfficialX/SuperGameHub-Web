@@ -22,7 +22,11 @@ let toastTimeout;
 function openMenu() {
     navLinks.classList.add("active");
 
-    menuToggle.setAttribute("aria-expanded", "true");
+    menuToggle.setAttribute(
+        "aria-expanded",
+        "true"
+    );
+
     menuToggle.setAttribute(
         "aria-label",
         "Close navigation menu"
@@ -32,7 +36,11 @@ function openMenu() {
 function closeMenu() {
     navLinks.classList.remove("active");
 
-    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute(
+        "aria-expanded",
+        "false"
+    );
+
     menuToggle.setAttribute(
         "aria-label",
         "Open navigation menu"
@@ -60,7 +68,9 @@ menuToggle.addEventListener("click", () => {
 navItems.forEach((link) => {
 
     link.addEventListener("click", () => {
+
         closeMenu();
+
     });
 
 });
@@ -150,7 +160,9 @@ const sectionObserver = new IntersectionObserver(
 );
 
 sections.forEach((section) => {
+
     sectionObserver.observe(section);
+
 });
 
 
@@ -199,7 +211,9 @@ function openNewEraModal() {
     document.body.classList.add("modal-open");
 
     if (modalCloseButton) {
+
         modalCloseButton.focus();
+
     }
 
 }
