@@ -3,13 +3,7 @@ const navLinks = document.querySelector(".nav-links");
 const navItems = document.querySelectorAll(".nav-links a");
 const sections = document.querySelectorAll("main section[id]");
 
-const newEraModal = document.querySelector("#new-era-modal");
-const updateReadButton = document.querySelector(".update-read-button");
-const modalCloseButton = document.querySelector(".modal-close");
-const modalOverlay = document.querySelector(".modal-overlay");
-
 const documentButtons = document.querySelectorAll(".document-button");
-
 const toast = document.querySelector(".site-toast");
 
 let toastTimeout;
@@ -20,6 +14,10 @@ let toastTimeout;
 ========================= */
 
 function openMenu() {
+    if (!navLinks || !menuToggle) {
+        return;
+    }
+
     navLinks.classList.add("active");
 
     menuToggle.setAttribute(
@@ -34,6 +32,10 @@ function openMenu() {
 }
 
 function closeMenu() {
+    if (!navLinks || !menuToggle) {
+        return;
+    }
+
     navLinks.classList.remove("active");
 
     menuToggle.setAttribute(
@@ -47,18 +49,23 @@ function closeMenu() {
     );
 }
 
-menuToggle.addEventListener("click", () => {
+if (menuToggle) {
 
-    const isOpen =
-        navLinks.classList.contains("active");
+    menuToggle.addEventListener("click", () => {
 
-    if (isOpen) {
-        closeMenu();
-    } else {
-        openMenu();
-    }
+        const isOpen =
+            navLinks &&
+            navLinks.classList.contains("active");
 
-});
+        if (isOpen) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+
+    });
+
+}
 
 
 /* =========================
@@ -68,9 +75,7 @@ menuToggle.addEventListener("click", () => {
 navItems.forEach((link) => {
 
     link.addEventListener("click", () => {
-
         closeMenu();
-
     });
 
 });
@@ -83,16 +88,7 @@ navItems.forEach((link) => {
 document.addEventListener("keydown", (event) => {
 
     if (event.key === "Escape") {
-
         closeMenu();
-
-        if (
-            newEraModal &&
-            newEraModal.classList.contains("active")
-        ) {
-            closeNewEraModal();
-        }
-
     }
 
 });
@@ -103,6 +99,10 @@ document.addEventListener("keydown", (event) => {
 ========================= */
 
 document.addEventListener("click", (event) => {
+
+    if (!navLinks || !menuToggle) {
+        return;
+    }
 
     const clickedInsideMenu =
         navLinks.contains(event.target);
@@ -125,45 +125,47 @@ document.addEventListener("click", (event) => {
    ACTIVE NAVIGATION
 ========================= */
 
-const sectionObserver = new IntersectionObserver(
-    (entries) => {
+if ("IntersectionObserver" in window) {
 
-        entries.forEach((entry) => {
+    const sectionObserver = new IntersectionObserver(
+        (entries) => {
 
-            if (!entry.isIntersecting) {
-                return;
-            }
+            entries.forEach((entry) => {
 
-            const currentId =
-                entry.target.id;
+                if (!entry.isIntersecting) {
+                    return;
+                }
 
-            navItems.forEach((link) => {
+                const currentId =
+                    entry.target.id;
 
-                const isCurrent =
-                    link.getAttribute("href") ===
-                    `#${currentId}`;
+                navItems.forEach((link) => {
 
-                link.classList.toggle(
-                    "active",
-                    isCurrent
-                );
+                    const isCurrent =
+                        link.getAttribute("href") ===
+                        `#${currentId}`;
+
+                    link.classList.toggle(
+                        "active",
+                        isCurrent
+                    );
+
+                });
 
             });
 
-        });
+        },
+        {
+            root: null,
+            threshold: 0.35
+        }
+    );
 
-    },
-    {
-        root: null,
-        threshold: 0.35
-    }
-);
+    sections.forEach((section) => {
+        sectionObserver.observe(section);
+    });
 
-sections.forEach((section) => {
-
-    sectionObserver.observe(section);
-
-});
+}
 
 
 /* =========================
@@ -192,125 +194,34 @@ function showToast(message) {
 
 
 /* =========================
-   NEW ERA UPDATE MODAL
-========================= */
-
-function openNewEraModal() {
-
-    if (!newEraModal) {
-        return;
-    }
-
-    newEraModal.classList.add("active");
-
-    newEraModal.setAttribute(
-        "aria-hidden",
-        "false"
-    );
-
-    document.body.classList.add("modal-open");
-
-    if (modalCloseButton) {
-
-        modalCloseButton.focus();
-
-    }
-
-}
-
-
-function closeNewEraModal() {
-
-    if (!newEraModal) {
-        return;
-    }
-
-    newEraModal.classList.remove("active");
-
-    newEraModal.setAttribute(
-        "aria-hidden",
-        "true"
-    );
-
-    document.body.classList.remove("modal-open");
-
-}
-
-
-if (updateReadButton) {
-
-    updateReadButton.addEventListener(
-        "click",
-        () => {
-
-            openNewEraModal();
-
-        }
-    );
-
-}
-
-
-if (modalCloseButton) {
-
-    modalCloseButton.addEventListener(
-        "click",
-        () => {
-
-            closeNewEraModal();
-
-        }
-    );
-
-}
-
-
-if (modalOverlay) {
-
-    modalOverlay.addEventListener(
-        "click",
-        () => {
-
-            closeNewEraModal();
-
-        }
-    );
-
-}
-
-
-/* =========================
    DOCUMENT BUTTONS
 ========================= */
 
 documentButtons.forEach((button) => {
 
-    button.addEventListener(
-        "click",
-        () => {
+    button.addEventListener("click", () => {
 
-            const documentType =
-                button.dataset.document;
+        const documentType =
+            button.dataset.document;
 
-            if (documentType === "game-documents") {
+        if (documentType === "game-documents") {
 
-                showToast(
-                    "Official game documents will be added here soon."
-                );
+            showToast(
+                "Official game documents will be added here soon."
+            );
 
-                return;
-            }
+            return;
+        }
 
-            if (documentType === "announcements") {
+        if (documentType === "announcements") {
 
-                showToast(
-                    "Official announcements will be added here soon."
-                );
-
-            }
+            showToast(
+                "Official announcements will be added here soon."
+            );
 
         }
-    );
+
+    });
 
 });
 
