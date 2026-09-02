@@ -10,6 +10,7 @@
     --accent-hover: #5aa6ff;
     --success: #38d996;
     --warning: #ffb347;
+    --danger: #ff6b6b;
 }
 
 * {
@@ -53,7 +54,6 @@ a {
 /* =========================
    HEADER
 ========================= */
-
 .site-header {
     position: sticky;
     top: 0;
@@ -155,10 +155,7 @@ a {
     font-size: 24px;
     line-height: 1;
     cursor: pointer;
-    transition:
-        background 0.2s ease,
-        border-color 0.2s ease,
-        transform 0.2s ease;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
 .menu-toggle:hover {
@@ -173,7 +170,6 @@ a {
 /* =========================
    HERO
 ========================= */
-
 .hero {
     min-height: 700px;
     display: flex;
@@ -181,11 +177,7 @@ a {
     position: relative;
     overflow: hidden;
     background:
-        radial-gradient(
-            circle at 50% 20%,
-            rgba(47, 140, 255, 0.18),
-            transparent 35%
-        ),
+        radial-gradient(circle at 50% 20%, rgba(47, 140, 255, 0.18), transparent 35%),
         var(--bg);
 }
 
@@ -195,12 +187,7 @@ a {
     inset: 0;
     pointer-events: none;
     background:
-        linear-gradient(
-            90deg,
-            transparent 0,
-            rgba(255, 255, 255, 0.02) 50%,
-            transparent 100%
-        );
+        linear-gradient(90deg, transparent 0, rgba(255, 255, 255, 0.02) 50%, transparent 100%);
 }
 
 .hero-content {
@@ -252,10 +239,7 @@ a {
     border-radius: 9px;
     font-size: 13px;
     font-weight: 900;
-    transition:
-        background 0.2s ease,
-        border-color 0.2s ease,
-        transform 0.2s ease;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
 .btn-primary {
@@ -280,7 +264,6 @@ a {
 /* =========================
    SECTIONS
 ========================= */
-
 .section {
     padding: 100px 0;
 }
@@ -308,7 +291,6 @@ a {
 /* =========================
    GAMES
 ========================= */
-
 .card-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -330,10 +312,7 @@ a {
     padding: 28px;
     display: flex;
     gap: 22px;
-    transition:
-        transform 0.2s ease,
-        background 0.2s ease,
-        border-color 0.2s ease;
+    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
 }
 
 .game-card:hover,
@@ -387,6 +366,11 @@ a {
     background: rgba(255, 179, 71, 0.1);
 }
 
+.status.discontinued {
+    color: var(--danger);
+    background: rgba(255, 107, 107, 0.1);
+}
+
 .card-link {
     display: inline-block;
     margin-top: 22px;
@@ -394,9 +378,7 @@ a {
     font-size: 12px;
     font-weight: 900;
     letter-spacing: 0.5px;
-    transition:
-        color 0.2s ease,
-        transform 0.2s ease;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .card-link:hover {
@@ -405,12 +387,12 @@ a {
 
 .card-link.disabled {
     color: var(--muted);
+    cursor: default;
 }
 
 /* =========================
    UPDATES
 ========================= */
-
 .update-list {
     display: grid;
     gap: 16px;
@@ -419,10 +401,7 @@ a {
 .empty-updates {
     padding: 36px;
     text-align: center;
-    transition:
-        transform 0.2s ease,
-        background 0.2s ease,
-        border-color 0.2s ease;
+    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
 }
 
 .empty-icon {
@@ -448,7 +427,6 @@ a {
 /* =========================
    CODES
 ========================= */
-
 .code-card {
     padding: 28px;
     display: flex;
@@ -475,7 +453,6 @@ a {
 /* =========================
    DOCUMENTS
 ========================= */
-
 .document-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -484,10 +461,7 @@ a {
 
 .document-card {
     padding: 28px;
-    transition:
-        transform 0.2s ease,
-        background 0.2s ease,
-        border-color 0.2s ease;
+    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
 }
 
 .document-icon {
@@ -510,7 +484,6 @@ a {
 /* =========================
    TOAST
 ========================= */
-
 .site-toast {
     position: fixed;
     left: 50%;
@@ -529,10 +502,7 @@ a {
     opacity: 0;
     visibility: hidden;
     transform: translate(-50%, 15px);
-    transition:
-        opacity 0.2s ease,
-        visibility 0.2s ease,
-        transform 0.2s ease;
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
 }
 
 .site-toast.show {
@@ -544,7 +514,6 @@ a {
 /* =========================
    FOOTER
 ========================= */
-
 .site-footer {
     border-top: 1px solid var(--border);
     background: #05070a;
@@ -571,7 +540,6 @@ a {
 /* =========================
    FOCUS STATES
 ========================= */
-
 a:focus-visible,
 button:focus-visible {
     outline: 2px solid var(--accent-hover);
@@ -581,9 +549,7 @@ button:focus-visible {
 /* =========================
    MOBILE
 ========================= */
-
 @media (max-width: 800px) {
-
     .navbar {
         min-height: 72px;
     }
@@ -676,9 +642,7 @@ button:focus-visible {
 /* =========================
    SMALL MOBILE
 ========================= */
-
 @media (max-width: 500px) {
-
     .container {
         width: min(100% - 28px, 1180px);
     }
