@@ -8,7 +8,7 @@
 
     <meta
         name="description"
-        content="Official Super Game Hub website for games, updates, redeem codes and announcements."
+        content="Official Super Game Hub website for games, updates, blog posts, redeem codes and announcements."
     >
 
     <meta
@@ -16,7 +16,7 @@
         content="#07090d"
     >
 
-    <link rel="icon" type="image/png" href="sgh-favicon.png">
+    <link rel="icon" type="image/png" href="logo.png">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -73,6 +73,10 @@
                 </li>
 
                 <li>
+                    <a href="#blog" class="nav-link">Blog</a>
+                </li>
+
+                <li>
                     <a href="#codes" class="nav-link">Codes</a>
                 </li>
 
@@ -109,7 +113,7 @@
 
                 <p class="hero-description">
                     Your official hub for Super Game Hub games,
-                    updates, redeem codes and announcements.
+                    updates, blog posts, redeem codes and announcements.
                 </p>
 
                 <div class="hero-actions">
@@ -137,7 +141,6 @@
 
         <!-- =========================
              GAMES
-             UNTOUCHED
         ========================== -->
         <section id="games" class="section">
 
@@ -238,7 +241,6 @@
 
         <!-- =========================
              UPDATES
-             TEA STALL NEW ERA REMOVED
         ========================== -->
         <section
             id="updates"
@@ -258,7 +260,8 @@
                     </h2>
 
                     <p>
-                        Stay updated with the newest SGH releases and changes.
+                        Stay updated with the newest Super Game Hub
+                        releases and changes.
                     </p>
 
                 </div>
@@ -285,6 +288,162 @@
                         </p>
 
                     </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             BLOG
+        ========================== -->
+        <section
+            id="blog"
+            class="section"
+        >
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        SUPER GAME HUB BLOG
+                    </p>
+
+                    <h2>
+                        From the Development Desk
+                    </h2>
+
+                    <p>
+                        Development stories, project updates,
+                        behind-the-scenes posts and news from
+                        Super Game Hub.
+                    </p>
+
+                </div>
+
+
+                <div class="blog-grid">
+
+                    <!-- REAL ARTICLE -->
+                    <article class="blog-card">
+
+                        <div class="blog-card-top">
+
+                            <span class="blog-category">
+                                OUR STORY
+                            </span>
+
+                            <span class="blog-date">
+                                SEPT 2026
+                            </span>
+
+                        </div>
+
+                        <div class="blog-card-content">
+
+                            <h3>
+                                Our Story — The Beginning of Super Game Hub
+                            </h3>
+
+                            <p>
+                                The story of how Super went from discovering
+                                Roblox as a player to building games and
+                                eventually creating Super Game Hub.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="card-link blog-read-more"
+                                data-blog="our-story"
+                            >
+                                READ MORE →
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- COMING SOON -->
+                    <article class="blog-card">
+
+                        <div class="blog-card-top">
+
+                            <span class="blog-category">
+                                BEHIND THE SCENES
+                            </span>
+
+                            <span class="blog-date">
+                                COMING SOON
+                            </span>
+
+                        </div>
+
+                        <div class="blog-card-content">
+
+                            <h3>
+                                Behind the Scenes at Super Game Hub
+                            </h3>
+
+                            <p>
+                                A deeper look at development, testing,
+                                design, problem-solving and the work
+                                behind future Super Game Hub projects.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="card-link disabled"
+                                disabled
+                            >
+                                COMING SOON →
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- COMING SOON -->
+                    <article class="blog-card">
+
+                        <div class="blog-card-top">
+
+                            <span class="blog-category">
+                                ANNOUNCEMENT
+                            </span>
+
+                            <span class="blog-date">
+                                COMING SOON
+                            </span>
+
+                        </div>
+
+                        <div class="blog-card-content">
+
+                            <h3>
+                                More Super Game Hub Stories Are Coming
+                            </h3>
+
+                            <p>
+                                More development logs, announcements and
+                                project stories will be published here.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="card-link disabled"
+                                disabled
+                            >
+                                COMING SOON →
+                            </button>
+
+                        </div>
+
+                    </article>
 
                 </div>
 
@@ -443,6 +602,68 @@
         </section>
 
     </main>
+
+
+    <!-- =========================
+         BLOG ARTICLE MODAL
+    ========================== -->
+    <div
+        class="blog-modal"
+        id="blog-modal"
+        aria-hidden="true"
+    >
+
+        <div
+            class="blog-modal-overlay"
+            data-close-blog
+        ></div>
+
+        <article
+            class="blog-modal-content"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="blog-modal-title"
+        >
+
+            <button
+                type="button"
+                class="blog-modal-close"
+                id="blog-modal-close"
+                aria-label="Close blog article"
+            >
+                ×
+            </button>
+
+            <div class="blog-modal-header">
+
+                <span
+                    class="blog-category"
+                    id="blog-modal-category"
+                >
+                    OUR STORY
+                </span>
+
+                <span
+                    class="blog-date"
+                    id="blog-modal-date"
+                >
+                    SEPT 2026
+                </span>
+
+            </div>
+
+            <h2 id="blog-modal-title">
+                Our Story — The Beginning of Super Game Hub
+            </h2>
+
+            <div
+                class="blog-modal-body"
+                id="blog-modal-body"
+            ></div>
+
+        </article>
+
+    </div>
 
 
     <!-- =========================
