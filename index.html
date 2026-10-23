@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <title>Super Game Hub | Official Website</title>
+    <title>Super Game Hub</title>
 
     <meta
         name="description"
@@ -17,22 +20,27 @@
     >
 
     <link
-        rel="canonical"
-        href="https://supergamehub.sghub.workers.dev/"
+        rel="icon"
+        type="image/png"
+        href="sgh-favicon.png"
     >
 
-    <link rel="icon" type="image/png" href="logo.png">
-
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 </head>
 
 <body>
 
     <!-- =========================
-         NAVIGATION
+         HEADER / NAVIGATION
     ========================== -->
     <header class="site-header">
-        <nav class="navbar container">
+        <nav
+            class="navbar container"
+            aria-label="Primary navigation"
+        >
 
             <a
                 href="#home"
@@ -66,27 +74,57 @@
                 id="primary-navigation"
             >
                 <li>
-                    <a href="#home" class="nav-link active">Home</a>
+                    <a
+                        href="#home"
+                        class="nav-link active"
+                    >
+                        Home
+                    </a>
                 </li>
 
                 <li>
-                    <a href="#games" class="nav-link">Games</a>
+                    <a
+                        href="#games"
+                        class="nav-link"
+                    >
+                        Games
+                    </a>
                 </li>
 
                 <li>
-                    <a href="#updates" class="nav-link">Updates</a>
+                    <a
+                        href="#updates"
+                        class="nav-link"
+                    >
+                        Updates
+                    </a>
                 </li>
 
                 <li>
-                    <a href="#blog" class="nav-link">Blog</a>
+                    <a
+                        href="#blog"
+                        class="nav-link"
+                    >
+                        Blog
+                    </a>
                 </li>
 
                 <li>
-                    <a href="#codes" class="nav-link">Codes</a>
+                    <a
+                        href="#codes"
+                        class="nav-link"
+                    >
+                        Codes
+                    </a>
                 </li>
 
                 <li>
-                    <a href="#documents" class="nav-link">Documents</a>
+                    <a
+                        href="#documents"
+                        class="nav-link"
+                    >
+                        Documents
+                    </a>
                 </li>
             </ul>
 
@@ -95,21 +133,19 @@
 
 
     <!-- =========================
-         MAIN CONTENT
+         MAIN
     ========================== -->
     <main>
 
         <!-- =========================
              HERO
         ========================== -->
-        <section id="home" class="hero">
+        <section
+            id="home"
+            class="hero"
+        >
 
             <div class="container hero-content">
-
-                <div class="hero-status">
-                    <span class="hero-status-dot"></span>
-                    BLOG IS LIVE
-                </div>
 
                 <p class="eyebrow">
                     OFFICIAL SUPER GAME HUB
@@ -123,7 +159,7 @@
 
                 <p class="hero-description">
                     Your official hub for Super Game Hub games,
-                    updates, blog posts, redeem codes and announcements.
+                    updates, redeem codes, blog posts and announcements.
                 </p>
 
                 <div class="hero-actions">
@@ -144,6 +180,59 @@
 
                 </div>
 
+
+                <!-- LAZER COMEBACK BANNER -->
+                <div class="hero-comeback-wrap">
+
+                    <img
+                        src="Banner.jpg"
+                        alt="LAZER OBBY BY SUPER — THE COMEBACK"
+                        class="hero-comeback-banner"
+                    >
+
+                </div>
+
+
+                <!-- LAZER COMEBACK FEATURE -->
+                <div class="hero-comeback-feature">
+
+                    <div class="hero-comeback-icon-wrap">
+
+                        <img
+                            src="lazer-comeback-icon.png"
+                            alt="LAZER OBBY BY SUPER"
+                            class="hero-comeback-icon"
+                        >
+
+                    </div>
+
+                    <div class="hero-comeback-copy">
+
+                        <span class="status comeback">
+                            COMEBACK
+                        </span>
+
+                        <h2>
+                            LAZER OBBY BY SUPER
+                        </h2>
+
+                        <p>
+                            The project that started it all is
+                            returning with a major comeback.
+                        </p>
+
+                        <button
+                            type="button"
+                            class="card-link comeback-open-button"
+                            data-open-lazer
+                        >
+                            VIEW COMEBACK →
+                        </button>
+
+                    </div>
+
+                </div>
+
             </div>
 
         </section>
@@ -152,7 +241,10 @@
         <!-- =========================
              GAMES
         ========================== -->
-        <section id="games" class="section">
+        <section
+            id="games"
+            class="section"
+        >
 
             <div class="container">
 
@@ -175,7 +267,56 @@
 
                 <div class="card-grid">
 
-                    <!-- TEA STALL SIMULATOR -->
+
+                    <!-- LAZER -->
+                    <article class="game-card game-card-featured">
+
+                        <div class="game-featured-image-wrap">
+
+                            <img
+                                src="Banner.jpg"
+                                alt="LAZER OBBY BY SUPER"
+                                class="game-featured-image"
+                            >
+
+                        </div>
+
+                        <div class="card-content">
+
+                            <div class="status-row">
+                                <span class="status comeback">
+                                    COMEBACK
+                                </span>
+
+                                <span class="status upcoming">
+                                    IN DEVELOPMENT
+                                </span>
+                            </div>
+
+                            <h3>
+                                LAZER OBBY BY SUPER
+                            </h3>
+
+                            <p>
+                                The original Super Game Hub project is
+                                being brought back with a new comeback
+                                experience and more.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="card-link"
+                                data-open-lazer
+                            >
+                                VIEW COMEBACK →
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- TEA STALL -->
                     <article class="game-card">
 
                         <div
@@ -196,8 +337,9 @@
                             </h3>
 
                             <p>
-                                Build your tea stall, serve customers,
-                                manage your business and grow your empire.
+                                This project has been discontinued
+                                and is no longer actively supported
+                                by Super Game Hub.
                             </p>
 
                             <span class="card-link disabled">
@@ -209,7 +351,7 @@
                     </article>
 
 
-                    <!-- UPCOMING GAMES -->
+                    <!-- MORE GAMES -->
                     <article class="game-card">
 
                         <div
@@ -230,8 +372,8 @@
                             </h3>
 
                             <p>
-                                New Super Game Hub projects are currently
-                                in development.
+                                New Super Game Hub projects are
+                                currently in development.
                             </p>
 
                             <span class="card-link disabled">
@@ -270,8 +412,8 @@
                     </h2>
 
                     <p>
-                        Stay updated with the newest Super Game Hub
-                        releases and changes.
+                        Stay updated with the newest SGH releases,
+                        projects and changes.
                     </p>
 
                 </div>
@@ -279,25 +421,103 @@
 
                 <div class="update-list">
 
-                    <div class="empty-updates">
 
-                        <span
-                            class="empty-icon"
+                    <!-- LAZER UPDATE -->
+                    <article class="update-card lazer-update-card">
+
+                        <div class="lazer-update-image-wrap">
+
+                            <img
+                                src="Banner.jpg"
+                                alt="LAZER OBBY BY SUPER — THE COMEBACK"
+                                class="lazer-update-banner"
+                            >
+
+                        </div>
+
+                        <div class="update-content">
+
+                            <div class="update-meta">
+
+                                <span class="update-tag comeback-tag">
+                                    COMEBACK
+                                </span>
+
+                                <span class="update-status">
+                                    SEPT 2026
+                                </span>
+
+                            </div>
+
+                            <h3>
+                                LAZER OBBY BY SUPER — THE COMEBACK
+                            </h3>
+
+                            <p>
+                                Super Game Hub is bringing back its
+                                original project with a major comeback.
+                                More details and changes will be revealed
+                                as development continues.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="card-link"
+                                data-open-lazer
+                            >
+                                READ COMEBACK UPDATE →
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- OFFICIAL ANNOUNCEMENT -->
+                    <article class="update-card announcement-feature-card">
+
+                        <div
+                            class="update-icon announcement-icon"
                             aria-hidden="true"
                         >
-                            📰
-                        </span>
+                            📢
+                        </div>
 
-                        <h3>
-                            No new updates yet.
-                        </h3>
+                        <div class="update-content">
 
-                        <p>
-                            New Super Game Hub announcements and project
-                            updates will appear here.
-                        </p>
+                            <div class="update-meta">
 
-                    </div>
+                                <span class="update-tag">
+                                    OFFICIAL
+                                </span>
+
+                                <span class="update-status">
+                                    SEPT 2026
+                                </span>
+
+                            </div>
+
+                            <h3>
+                                A Major Update Is In Development
+                            </h3>
+
+                            <p>
+                                We are currently working on a major
+                                update for LAZER OBBY BY SUPER.
+                                More information will be revealed later.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="card-link"
+                                data-open-announcements
+                            >
+                                VIEW ANNOUNCEMENT →
+                            </button>
+
+                        </div>
+
+                    </article>
 
                 </div>
 
@@ -319,17 +539,15 @@
                 <div class="section-heading">
 
                     <p class="section-label">
-                        SUPER GAME HUB BLOG
+                        SGH BLOG
                     </p>
 
                     <h2>
-                        From the Development Desk
+                        Stories From Super Game Hub
                     </h2>
 
                     <p>
-                        Development stories, project updates,
-                        behind-the-scenes posts and news from
-                        Super Game Hub.
+                        Project history, memories and important moments.
                     </p>
 
                 </div>
@@ -337,12 +555,11 @@
 
                 <div class="blog-grid">
 
-                    <!-- REAL ARTICLE -->
                     <article class="blog-card">
 
-                        <div class="blog-card-top">
+                        <div class="blog-card-header">
 
-                            <span class="blog-category">
+                            <span class="status comeback">
                                 OUR STORY
                             </span>
 
@@ -352,106 +569,24 @@
 
                         </div>
 
-                        <div class="blog-card-content">
+                        <h3>
+                            Our Story — The Beginning of Super Game Hub
+                        </h3>
 
-                            <h3>
-                                Our Story — The Beginning of Super Game Hub
-                            </h3>
+                        <p>
+                            Every project starts somewhere. For Super
+                            Game Hub, the journey began with a simple
+                            idea: make something fun, improve it,
+                            learn from mistakes and keep building.
+                        </p>
 
-                            <p>
-                                The story of how Super went from discovering
-                                Roblox as a player to building games and
-                                eventually creating Super Game Hub.
-                            </p>
-
-                            <button
-                                type="button"
-                                class="card-link blog-read-more"
-                                data-blog="our-story"
-                            >
-                                READ MORE →
-                            </button>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- COMING SOON -->
-                    <article class="blog-card">
-
-                        <div class="blog-card-top">
-
-                            <span class="blog-category">
-                                BEHIND THE SCENES
-                            </span>
-
-                            <span class="blog-date">
-                                COMING SOON
-                            </span>
-
-                        </div>
-
-                        <div class="blog-card-content">
-
-                            <h3>
-                                Behind the Scenes at Super Game Hub
-                            </h3>
-
-                            <p>
-                                A deeper look at development, testing,
-                                design, problem-solving and the work
-                                behind future Super Game Hub projects.
-                            </p>
-
-                            <button
-                                type="button"
-                                class="card-link disabled"
-                                disabled
-                            >
-                                COMING SOON →
-                            </button>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- COMING SOON -->
-                    <article class="blog-card">
-
-                        <div class="blog-card-top">
-
-                            <span class="blog-category">
-                                ANNOUNCEMENT
-                            </span>
-
-                            <span class="blog-date">
-                                COMING SOON
-                            </span>
-
-                        </div>
-
-                        <div class="blog-card-content">
-
-                            <h3>
-                                More Super Game Hub Stories Are Coming
-                            </h3>
-
-                            <p>
-                                More development logs, announcements and
-                                project stories will be published here.
-                            </p>
-
-                            <button
-                                type="button"
-                                class="card-link disabled"
-                                disabled
-                            >
-                                COMING SOON →
-                            </button>
-
-                        </div>
+                        <button
+                            type="button"
+                            class="card-link"
+                            data-blog-id="our-story"
+                        >
+                            READ STORY →
+                        </button>
 
                     </article>
 
@@ -463,11 +598,11 @@
 
 
         <!-- =========================
-             REDEEM CODES
+             CODES
         ========================== -->
         <section
             id="codes"
-            class="section"
+            class="section section-alt"
         >
 
             <div class="container">
@@ -503,7 +638,6 @@
 
                     </div>
 
-
                     <button
                         type="button"
                         class="copy-code"
@@ -524,7 +658,7 @@
         ========================== -->
         <section
             id="documents"
-            class="section section-alt"
+            class="section"
         >
 
             <div class="container">
@@ -540,13 +674,15 @@
                     </h2>
 
                     <p>
-                        Important Super Game Hub documents and information.
+                        Important Super Game Hub documents
+                        and information.
                     </p>
 
                 </div>
 
 
                 <div class="document-grid">
+
 
                     <!-- GAME DOCUMENTS -->
                     <article class="document-card">
@@ -563,7 +699,8 @@
                         </h3>
 
                         <p>
-                            Official documents related to our games.
+                            Official documents related to
+                            our games.
                         </p>
 
                         <button
@@ -592,7 +729,8 @@
                         </h3>
 
                         <p>
-                            Official announcements from Super Game Hub.
+                            Official announcements from
+                            Super Game Hub.
                         </p>
 
                         <button
@@ -615,7 +753,218 @@
 
 
     <!-- =========================
-         BLOG ARTICLE MODAL
+         LAZER COMEBACK MODAL
+    ========================== -->
+    <div
+        class="lazer-modal"
+        id="lazer-modal"
+        aria-hidden="true"
+    >
+
+        <div
+            class="lazer-modal-overlay"
+            data-close-lazer
+        ></div>
+
+        <article
+            class="lazer-modal-content"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="lazer-modal-title"
+        >
+
+            <button
+                type="button"
+                class="modal-close"
+                id="lazer-modal-close"
+                aria-label="Close comeback modal"
+            >
+                ×
+            </button>
+
+
+            <img
+                src="Banner.jpg"
+                alt="LAZER OBBY BY SUPER — THE COMEBACK"
+                class="lazer-modal-banner"
+            >
+
+
+            <div class="lazer-modal-header">
+
+                <span class="status comeback">
+                    COMEBACK
+                </span>
+
+                <span class="blog-date">
+                    SEPT 2026
+                </span>
+
+            </div>
+
+
+            <h2 id="lazer-modal-title">
+                LAZER OBBY BY SUPER — THE COMEBACK
+            </h2>
+
+
+            <p class="lazer-modal-intro">
+                The original project is coming back.
+                This comeback is about remembering where
+                Super Game Hub started while building something
+                new from it.
+            </p>
+
+
+            <div class="comeback-gallery">
+
+                <figure class="gallery-item">
+                    <img
+                        src="OLDMAP.png"
+                        alt="Original LAZER map"
+                    >
+                    <figcaption>
+                        The original map
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img
+                        src="MAP1.png"
+                        alt="Updated LAZER map"
+                    >
+                    <figcaption>
+                        After updates
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img
+                        src="CHT-Event.png"
+                        alt="LAZER Christmas event"
+                    >
+                    <figcaption>
+                        Christmas Event
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img
+                        src="EventTimeGroupPhto.png"
+                        alt="LAZER event group photo"
+                    >
+                    <figcaption>
+                        Event-time memories
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img
+                        src="Current1.png"
+                        alt="Current LAZER map view"
+                    >
+                    <figcaption>
+                        Current map — view 1
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img
+                        src="Current2.png"
+                        alt="Current LAZER map view"
+                    >
+                    <figcaption>
+                        Current map — view 2
+                    </figcaption>
+                </figure>
+
+            </div>
+
+
+            <div class="lazer-modal-footer">
+
+                <strong>
+                    LAZER OBBY BY SUPER
+                </strong>
+
+                <span>
+                    THE COMEBACK
+                </span>
+
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <!-- =========================
+         ANNOUNCEMENTS MODAL
+    ========================== -->
+    <div
+        class="announcement-modal"
+        id="announcement-modal"
+        aria-hidden="true"
+    >
+
+        <div
+            class="announcement-modal-overlay"
+            data-close-announcement
+        ></div>
+
+        <article
+            class="announcement-modal-content"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="announcement-modal-title"
+        >
+
+            <button
+                type="button"
+                class="announcement-modal-close"
+                id="announcement-modal-close"
+                aria-label="Close announcement"
+            >
+                ×
+            </button>
+
+
+            <div class="announcement-modal-header">
+
+                <span
+                    class="status comeback"
+                    id="announcement-modal-category"
+                >
+                    OFFICIAL ANNOUNCEMENT
+                </span>
+
+                <span
+                    class="blog-date"
+                    id="announcement-modal-date"
+                >
+                    SEPT 2026
+                </span>
+
+            </div>
+
+
+            <h2 id="announcement-modal-title">
+                LAZER OBBY BY SUPER — A Major Update Is In Development
+            </h2>
+
+
+            <div
+                class="announcement-modal-body"
+                id="announcement-modal-body"
+            ></div>
+
+        </article>
+
+    </div>
+
+
+    <!-- =========================
+         BLOG MODAL
     ========================== -->
     <div
         class="blog-modal"
@@ -639,15 +988,16 @@
                 type="button"
                 class="blog-modal-close"
                 id="blog-modal-close"
-                aria-label="Close blog article"
+                aria-label="Close blog"
             >
                 ×
             </button>
 
+
             <div class="blog-modal-header">
 
                 <span
-                    class="blog-category"
+                    class="status comeback"
                     id="blog-modal-category"
                 >
                     OUR STORY
@@ -662,9 +1012,11 @@
 
             </div>
 
+
             <h2 id="blog-modal-title">
                 Our Story — The Beginning of Super Game Hub
             </h2>
+
 
             <div
                 class="blog-modal-body"
